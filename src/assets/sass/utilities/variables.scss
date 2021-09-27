@@ -1,0 +1,22 @@
+$color-white: value-config($color, 'white');
+$color-yellow: value-config($color, 'yellow');
+$color-orange: value-config($color, 'orange');
+$color-red: value-config($color, 'red');
+$color-brown: value-config($color, 'brown');
+$color-green: value-config($color, 'green');
+$color-deep-green: value-config($color, 'deep-green');
+$color-blue: value-config($color, 'blue');
+$color-light-gray: value-config($color, 'light-gray');
+$color-gray: value-config($color, 'gray');
+$color-deep-gray: value-config($color, 'deep-gray');
+$color-black: value-config($color, 'black');
+$color-light-black: value-config($color, 'light-black');
+
+$font-size-r: value-config($font, 'size', 'regular');
+$font-size-m: value-config($font, 'size', 'medium');
+$font-weight-r: value-config($font, 'weight', 'regular');
+$font-weight-m: value-config($font, 'weight', 'medium');
+$font-height-r: value-config($font, 'line-height', 'regular');
+$font-height-m: value-config($font, 'line-height', 'medium');
+
+$font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;

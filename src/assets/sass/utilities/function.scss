@@ -1,0 +1,11 @@
+@use 'sass:math';
+@function value-config($var-name, $keys...) {
+  @each $key in $keys {
+    $var-name: map-get($var-name, $key);
+  }
+  @return $var-name;
+}
+
+@function unit-convert($amount, $unit: rem, $root: 320) {
+  @return math.div($amount, $root) * 1+#{$unit};
+}

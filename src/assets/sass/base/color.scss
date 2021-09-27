@@ -1,0 +1,10 @@
+﻿/** @define color*/
+@each $name, $value in $color {
+  .color-#{$name} {
+    color: $value;
+  }
+
+  .color-#{$name}-bg {
+    background-color: $value;
+  }
+}

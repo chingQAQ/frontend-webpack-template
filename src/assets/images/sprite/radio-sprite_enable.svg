@@ -1,0 +1,15 @@
+<svg id="Component_37_3" data-name="Component 37 – 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #de9935;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_3544" data-name="Rectangle 3544" class="cls-1" width="16" height="16" rx="8"/>
+  <circle id="Ellipse_36" data-name="Ellipse 36" class="cls-2" cx="4" cy="4" r="4" transform="translate(4 4)"/>
+</svg>

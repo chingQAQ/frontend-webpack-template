@@ -1,0 +1,15 @@
+<svg id="Component_16_1" data-name="Component 16 – 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #de9935;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_3544" data-name="Rectangle 3544" class="cls-1" width="16" height="16" rx="2"/>
+  <path id="Path_266" data-name="Path 266" class="cls-2" d="M2637.142-112.429h-4.286a.857.857,0,0,1-.857-.857.858.858,0,0,1,.857-.858h3.429v-6a.857.857,0,0,1,.857-.857.857.857,0,0,1,.857.857v6.857a.857.857,0,0,1-.857.857Z" transform="translate(-1937.755 -1773.837) rotate(45)"/>
+</svg>

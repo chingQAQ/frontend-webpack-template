@@ -1,0 +1,30 @@
+$color: (
+  'white': #fff,
+  'yellow': #ffcd37,
+  'orange': #de9935,
+  'red': #c82800,
+  'brown': #62391d,
+  'green': #33843e,
+  'deep-green': #23623e,
+  'blue': #00a7ff,
+  'light-gray': #f0f0f0,
+  'gray': #adadad,
+  'deep-gray': #707070,
+  'black': #000,
+  'light-black': #181818,
+);
+
+$font: (
+  'size': (
+    'regular': 14,
+    'medium': 20,
+  ),
+  'weight': (
+    'regular': 400,
+    'medium': 500,
+  ),
+  'line-height': (
+    'regular': 22,
+    'medium': 29,
+  ),
+);

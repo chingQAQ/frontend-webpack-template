@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <title><%= documentTitle %></title>
+    <% 
+      const [metas, links, scripts] = htmlWebpackPlugin.tags.headTags.reduce((acc, curr) => {
+        if (/meta\s{1}/g.test(curr)) acc[0].push(curr);
+        if (/link\s{1}/g.test(curr)) acc[1].push(curr);
+        if (/script\s{1}/g.test(curr)) acc[2].push(curr);
+        return acc;
+      }, [[],[],[]]);
+
+      for (const meta of metas ) { %>
+        <%= meta %>
+      <% } %>
+      <% for (const link of links ) {%>
+        <%= link %>
+      <% } %>
+  </head>
+  <body>
+    <div id="app"></div>
+    <% 
+      for (const script of scripts ) { %>
+        <%= script %>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin imgRatio($img, $ext: png) {
+  background-image: url('../assets/images/#{$img}.#{$ext}');
+  @media screen and (min-resolution: 2dppx) {
+    background-image: url('../assets/images/#{$img}@2x.#{$ext}');
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background-image: url('../assets/images/#{$img}@3x.#{$ext}');
+  }
+}
+
+@mixin space($type, $direction, $amount, $amount2: $amount) {
+  @if $direction == x {
+    #{$type}-left: #{$amount};
+    #{$type}-right: #{$amount2};
+  }
+
+  @if $direction == y {
+    #{$type}-top: #{$amount};
+    #{$type}-bottom: #{$amount2};
+  }
+
+  @if $direction == all {
+    #{$type}: #{$amount};
+  }
+
+  @each $i in (top, right, bottom, left) {
+    @if ($direction == $i) {
+      #{$type}-#{$direction}: #{$amount};
+    }
+  }
+}
