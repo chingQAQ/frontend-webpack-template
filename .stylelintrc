@@ -1,0 +1,97 @@
+﻿{
+    "extends": [
+        "stylelint-config-sass-guidelines",
+        "stylelint-config-rational-order"
+    ],
+    "plugins": [
+        "stylelint-prettier",
+        "stylelint-selector-bem-pattern",
+        "stylelint-config-rational-order/plugin"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            true,
+            {
+                "printWidth": 800,
+                "singleQuote": true,
+                "semi": true,
+                "bracketSpacing": false,
+                "endOfLine": "auto"
+            }
+        ],
+        "at-rule-disallowed-list": [],
+        "value-no-vendor-prefix": [
+            true,
+            {
+                "ignoreValues": [
+                    "box"
+                ]
+            }
+        ],
+        "property-no-vendor-prefix": [
+            true,
+            {
+                "ignoreProperties": [
+                    "line-clamp",
+                    "box-orient"
+                ]
+            }
+        ],
+        "selector-pseudo-class-no-unknown": true,
+        "selector-max-type": 0,
+        "selector-max-pseudo-class": 2,
+        "selector-class-pattern": null,
+        "order/properties-alphabetical-order": null,
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            "declarations",
+            "rules"
+        ],
+        "order/properties-order": [],
+        "plugin/rational-order": [
+            true,
+            {
+                "border-in-box-model": false,
+                "empty-line-between-groups": false
+            }
+        ],
+        "max-nesting-depth": [
+            2,
+            {
+                "ignoreAtRules": [
+                    "each",
+                    "media",
+                    "supports",
+                    "include",
+                    "at-root"
+                ]
+            }
+        ],
+        "scss/dollar-variable-pattern": "^[a-z][a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*?$",
+        "scss/at-function-pattern": "^[a-z][a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*?$",
+        "scss/at-mixin-pattern": "^[a-z][a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*?$",
+        "plugin/selector-bem-pattern": {
+            "componentName": "^[a-z][a-zA-Z0-9]+$",
+            "componentSelectors": {
+                "initial": "^\\.{componentName}(?:-[a-z][a-zA-Z0-9]*){0,1}(?:--[a-z][a-zA-Z0-9]*){0,2}(?:-[a-z][a-zA-Z0-9]*){0,1}(?:\\[.+\\])?$"
+            },
+            "utilitySelectors": "^\\.[a-z][a-zA-Z0-9]+(?:-[a-zA-Z0-9]+){0,3}(?:\\[.+\\])?$",
+            "ignoreSelectors": [
+                "\\#\\{.*\\}"
+            ],
+            "implicitComponents": "**/*.scss",
+            "implicitUtilities": ["**/base/*.scss", "**/layout/*.scss"]
+        }
+    },
+    "ignoreFiles": [
+        "**/editor.*",
+        "**/reset.scss",
+        "**/base.scss",
+        "**/style-*.scss",
+        "**/style-*.css",
+        "**/style.css",
+        "**/backend/sass/*.scss",
+        "**/*.js"
+    ]
+}

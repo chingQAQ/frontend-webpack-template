@@ -1,0 +1,27 @@
+{
+  "eslint.validate": [
+    "html",
+    "javascript"
+  ],
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": false
+    }
+  },
+  "[html]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+      "source.fixAll.eslint": false,
+      "source.fixAll.stylelint": false
+    }
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+      "source.fixAll.eslint": false,
+      "source.fixAll.stylelint": true
+    }
+  }
+}

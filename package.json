@@ -1,17 +1,16 @@
 {
   "name": "frontend-vue-webpack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --config build/webpack.config.dev",
-    "build:prod": "webpack --config build/webpack.config.prod",
-    "serve": "webpack serve --hot --config build/webpack.config.dev",
+    "build:dev": "webpack --config bin/webpack.config.dev",
+    "build:prod": "webpack --config bin/webpack.config.prod",
+    "serve": "webpack serve --hot --config bin/webpack.config.dev",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Aion Chiu",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
