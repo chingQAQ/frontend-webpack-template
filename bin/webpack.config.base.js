@@ -1,5 +1,6 @@
 const { config: { base, dev, prod }, htmlLinks, htmlMetas } = require('./config');
 const { resolve } = require('./util');
+const { join } = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -10,8 +11,15 @@ const globImporter = require('node-sass-glob-importer');
 
 module.exports = mode => ({
 	stats: {
-		children: true,
-		errorDetails: true
+		all: false,
+		colors: true,
+		modules: false,
+		entrypoints: false,
+		nestedModulesSpace: 15,
+		assets: true,
+		errors: true,
+		performance: true
+		// preset: 'verbose'
 	},
 	mode,
 	devtool: mode === 'production' ? false : 'inline-source-map',
@@ -149,7 +157,7 @@ module.exports = mode => ({
 			metas: htmlMetas
 		}),
 		new CleanWebpackPlugin({
-			cleanOnceBeforeBuildPatterns: [mode === 'production' ? prod.outputPath : dev.outputPath]
+			cleanOnceBeforeBuildPatterns: [mode === 'production' ? join(prod.outputPath, '**') : join(dev.outputPath, '**')]
 		})
 	]
 });
