@@ -4,20 +4,36 @@ const webpackBaseConfig = require('./webpack.config.base');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const MODE = 'development';
-const webpackDevServer = {
+const webpackDevServer = MODE === 'development' ? {
 	devServer: {
-		contentBase: dev.outputPath,
-		port: dev.port,
-		publicPath: '/',
-		writeToDisk: true,
-		watchOptions: {
-			ignored: [dev.outputPath]
+		'static': {
+			directory: dev.outputPath,
+			publicPath: '/'
 		},
-		stats: {
-			excludeModules: [() => ['/sass/']]
-		}
+		'port': dev.port,
+		'devMiddleware': {
+			headers: {
+				'Cache-Control': 'no-store'
+			},
+			writeToDisk: true,
+			publicPath: '/'
+		},
+		'watchFiles': {
+			paths: ['src/**/*', 'public/**/*'],
+			options: {
+				usePolling: false,
+			}
+		},
+		'onListening': function (devServer) {
+			if (!devServer) {
+				throw new Error('webpack-dev-server is not defined');
+			}
+
+			const port = devServer.server.address().port;
+			console.log('Listening on port:', port);
+		},
 	}
-};
+} : {};
 const webpackDevConfig = {
 	entry: {
 		index: path.join(base.entryPath, 'index.js')
