@@ -23,6 +23,7 @@ module.exports = mode => ({
 	},
 	mode,
 	devtool: mode === 'production' ? false : 'inline-source-map',
+  context: resolve('src'),
 	module: {
 		rules: [
 			{
